@@ -59,7 +59,8 @@ export default {
   methods: {
     async deleteResturant(id) {
       const result = await axios.delete(
-        "http://localhost:4000/restaurants/" + id
+        /* "http://localhost:4000/restaurants/" + id */
+        `https://my-json-server.typicode.com/AMRWERY/restaurant-management-app/restaurants/` + id
       );
 
       if (result.status == 200) {

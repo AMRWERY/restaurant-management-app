@@ -59,7 +59,6 @@ export default {
       items: [
         { title: "Home", icon: "mdi-home-city" },
         { title: "Add Restaurant", icon: "mdi-plus" },
-        /* { title: "Update Restaurant", icon: "mdi-arrow-right" }, */
       ],
       rail: true,
     };
