@@ -59,7 +59,8 @@ export default {
 
   methods: {
     async signUp() {
-      const result = await axios.post("http://localhost:4000/users", {
+      /* const result = await axios.post("http://localhost:4000/users", */
+      const result = await axios.post(`https://my-json-server.typicode.com/AMRWERY/restaurant-management-app-json/users`, {
         name: this.name,
         email: this.email,
         password: this.password,

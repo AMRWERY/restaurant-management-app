@@ -49,7 +49,8 @@ export default {
 
   methods: {
     async login() {
-      const result = await axios.get(`http://localhost:4000/users?email=${this.email}&password=${this.password}`)
+      /* const result = await axios.get(`http://localhost:4000/users?email=${this.email}&password=${this.password}`) */
+      const result = await axios.get(`https://my-json-server.typicode.com/AMRWERY/restaurant-management-app-json/users?email=${this.email}&password=${this.password}`)
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user-info", JSON.stringify(result.data[0]));
         this.$router.replace("/");

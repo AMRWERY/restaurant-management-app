@@ -74,7 +74,8 @@ export default {
   methods: {
     async updateRestaurant() {
       /* console.log(this.restaurant) */
-      const result = await axios.put("http://localhost:4000/restaurants/" + this.$route.params.id, {
+      /* const result = await axios.put("http://localhost:4000/restaurants/" + this.$route.params.id, */
+      const result = await axios.put(`https://my-json-server.typicode.com/AMRWERY/restaurant-management-app-json/restaurants/` + this.$route.params.id, {
         name: this.restaurant.name,
         address: this.restaurant.address,
         logo: this.restaurant.logo,
@@ -93,7 +94,8 @@ export default {
       this.$router.replace("/sign-up");
     }
     /* console.log(this.$route.params.id) */
-    const result = await axios.get("http://localhost:4000/restaurants/" + this.$route.params.id);
+    /* const result = await axios.get("http://localhost:4000/restaurants/" + this.$route.params.id); */
+    const result = await axios.get(`https://my-json-server.typicode.com/AMRWERY/restaurant-management-app-json/restaurants/` + this.$route.params.id);
     console.log(result);
     this.restaurant = result.data;
   },

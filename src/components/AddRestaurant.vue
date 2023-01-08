@@ -73,7 +73,8 @@ export default {
 
   methods: {
    async addRestaurant() {
-      const result = await axios.post("http://localhost:4000/restaurants", {
+      /* const result = await axios.post("http://localhost:4000/restaurants", */
+      const result = await axios.post(`https://my-json-server.typicode.com/AMRWERY/restaurant-management-app-json/restaurants`, {
         name: this.restaurant.name,
         address: this.restaurant.address,
         logo: this.restaurant.logo,
